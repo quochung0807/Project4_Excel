@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: excel-generator
+    env: java
+    buildCommand: ./mvnw clean package
+    startCommand: java -jar target/*.jar
+    plan: free
+    envVars:
+      - key: JAVA_VERSION
+        value: 17
